@@ -12,14 +12,20 @@ public class Board {
     char o = 'O';
     String winner = "";
     public Board(Character[][] matrix) {
-        //X wins first
+        //X wins rows
         if (matrix[0][0] == x && matrix[0][1] == x && matrix[0][2] == x) {
             winner = winner.concat("X");
         } else if (matrix[1][0] == x && matrix[1][1] == x && matrix[1][2] == x) {
             winner = winner.concat("X");
         } else if (matrix[2][0] == x && matrix[2][1] == x && matrix[2][2] == x) {
             winner = winner.concat("X");
-        } else if (matrix[0][0] == x && matrix[1][0] == x && matrix[2][0] == x) {
+        }
+        //X wins columns
+        else if (matrix[0][0] == x && matrix[1][0] == x && matrix[2][0] == x) {
+            winner = winner.concat("X");
+        }else if (matrix[0][1] == x && matrix[1][1] == x && matrix[2][1] == x) {
+            winner = winner.concat("X");
+        }else if (matrix[0][2] == x && matrix[1][2] == x && matrix[2][2] == x) {
             winner = winner.concat("X");
         } else {
             winner = "";
@@ -55,5 +61,6 @@ public class Board {
         System.out.println(whoWins);
         return whoWins;
     }
+
 
 }
