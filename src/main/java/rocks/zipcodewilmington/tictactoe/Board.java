@@ -27,6 +27,34 @@ public class Board {
             winner = winner.concat("X");
         }else if (matrix[0][2] == x && matrix[1][2] == x && matrix[2][2] == x) {
             winner = winner.concat("X");
+        }
+        //X wins diagonal
+        else if (matrix[0][0] == x && matrix[1][1] == x && matrix[2][2] == x) {
+            winner = winner.concat("X");
+        }else if (matrix[0][2] == x && matrix[1][1] == x && matrix[2][0] == x) {
+            winner = winner.concat("X");
+        }
+        // O wins rows
+        else if (matrix[0][0] == o && matrix[0][1] == o && matrix[0][2] == o) {
+            winner = winner.concat("O");
+        } else if (matrix[1][0] == o && matrix[1][1] == o && matrix[1][2] == o) {
+            winner = winner.concat("O");
+        } else if (matrix[2][0] == o && matrix[2][1] == o && matrix[2][2] == o) {
+            winner = winner.concat("O");
+        }
+        //O wins columns
+        else if (matrix[0][0] == o && matrix[1][0] == o && matrix[2][0] == o) {
+            winner = winner.concat("O");
+        }else if (matrix[0][1] == o && matrix[1][1] == o && matrix[2][1] == o) {
+            winner = winner.concat("O");
+        }else if (matrix[0][2] == o && matrix[1][2] == o && matrix[2][2] == o) {
+            winner = winner.concat("O");
+        }
+        //O wins diagonal
+        else if (matrix[0][0] == o && matrix[1][1] == o && matrix[2][2] == o) {
+            winner = winner.concat("O");
+        }else if (matrix[0][2] == o && matrix[1][1] == o && matrix[2][0] == o) {
+            winner = winner.concat("O");
         } else {
             winner = "";
         }
